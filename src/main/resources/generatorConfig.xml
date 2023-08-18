@@ -27,7 +27,7 @@
                 targetProject="src/main/kotlin"/>
         <table tableName="%">
             <columnOverride column="role_type" typeHandler="org.apache.ibatis.type.EnumTypeHandler"
-                            javaType="com.book.manager.domain.enum.RoleType"/>
+                            javaType="com.book.manager.domain.enumclass.RoleType"/>
         </table>
     </context>
 </generatorConfiguration>

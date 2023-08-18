@@ -3,7 +3,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("org.springframework.boot") version "2.7.14"
     id("io.spring.dependency-management") version "1.0.15.RELEASE"
-    id("com.arenagod.gradle.MybatisGenerator") version "1.4" //追加
+//    id("com.arenagod.gradle.MybatisGenerator") version "1.4" //追加
+    id("com.thinkimi.gradle.MybatisGenerator") version "2.4"
     kotlin("jvm") version "1.6.21"
     kotlin("plugin.spring") version "1.6.21"
 }
@@ -27,7 +28,7 @@ dependencies {
 
 //	追加
     implementation("org.mybatis.dynamic-sql:mybatis-dynamic-sql:1.2.1")
-    implementation("mysql:mysql-connector-java:8.0.23")
+    implementation("mysql:mysql-connector-java:8.0.28")
     mybatisGenerator("org.mybatis.generator:mybatis-generator-core:1.4.0")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -49,3 +50,5 @@ mybatisGenerator {
     verbose = true
     configFile = "${projectDir}/src/main/resources/generatorConfig.xml"
 }
+
+
